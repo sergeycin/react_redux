@@ -1,17 +1,22 @@
 import React from 'react';
 import './App.css';
+import PostForm from './components/PostForm';
+import Posts from './components/Posts';
+import FetchedPosts from './components/FetchedPosts'
 function App() {
   return (
     <div className="App">
      <div className="container">
        <div className="col">
-       <p>FORM</p>
+      < PostForm />
        </div>
        <div className="col">
-       <p>POSTS</p>
+         <h2>Синхронные посты</h2>
+      <Posts posts ={[1,2,3]} />
        </div>
        <div className="col">
-       <p>FETCHED POSTS</p>
+         <h2>Асинхронные посты</h2>
+       <FetchedPosts  posts ={[]}/>
        </div>
     </div>
     </div>

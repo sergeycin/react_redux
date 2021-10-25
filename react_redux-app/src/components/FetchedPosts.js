@@ -1,13 +1,8 @@
-import React from 'react';
-export default class PostForm extends React.Component{
-    constructor(props){
-        super(props)
-
-        this.state = {}
+import React from 'react'
+import Post from './Post'
+export default ({posts}) => {
+    if (!posts.length){
+        return <button>ПОстов нет</button>
     }
-    render(){
-        return{
-          
-        }
-    }
+    return  posts.map(post => <Post post={post} key={post} />)
 }
